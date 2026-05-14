@@ -5,7 +5,7 @@ export default [
     ...prefix("bot", [
         route("invite", "routes/bot/invite.tsx"),
         route("github", "routes/bot/github.tsx"),
-        route("docs", "routes/bot/docs.tsx"),
+        route("docs", "routes/comingSoon/comingSoon.tsx"),
     ]),
     route("discord", "routes/discord/discordInvite.tsx"),
     route("*", "routes/$.tsx"),

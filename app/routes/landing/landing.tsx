@@ -1,0 +1,27 @@
+import './landing.css'
+import { useNavigate } from "react-router";
+import logo from './logoBanner.svg'
+import { Button } from "~/components/button/button";
+import { Nav } from "~/components/nav/nav";
+
+export function Landing() {
+  const navigate = useNavigate();
+  return (
+    <div className="relative flex flex-col h-screen overflow-hidden bg-neutral-100">
+      <header className="relative z-10 flex justify-center pt-6">
+        <Nav />
+      </header>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full gap-4">
+        <img src={logo} alt="Logo" />
+        <div className="flex flex-row gap-4">
+          <Button variant="primary" onClick={() => window.open('https://duckorg.statuspage.io/', '_blank')}>
+            Status
+          </Button>
+          <Button variant="secondary" onClick={() => navigate('/discord')}>
+            Join Discord
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

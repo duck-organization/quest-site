@@ -5,8 +5,14 @@ import mdx from "@mdx-js/rollup";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import path from "path";
 
 export default defineConfig({
+    resolve: {
+        alias: {
+            "~": path.resolve(__dirname, "./app"),
+        },
+    },
     plugins: [
         {
             enforce: 'pre',

@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { ComingSoon } from "./landing/comingSoon";
+import { Landing } from "./landing/landing";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,5 +10,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <ComingSoon />;
+  return <Landing />;
 }
