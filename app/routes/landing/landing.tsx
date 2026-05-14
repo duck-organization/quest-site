@@ -3,7 +3,6 @@ import { useNavigate } from "react-router";
 import logo from './logoBanner.svg'
 import { Button } from "~/components/button/button";
 import { Nav } from "~/components/nav/nav";
-import { StatusWidget } from "~/components/statusWidget/statusWidget";
 
 export function Landing() {
   const navigate = useNavigate();
@@ -23,7 +22,6 @@ export function Landing() {
           </Button>
         </div>
       </div>
-      <StatusWidget />
     </div>
   );
 }
