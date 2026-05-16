@@ -6,11 +6,11 @@ import { Nav } from "~/components/nav/nav";
 export function Landing() {
   const navigate = useNavigate();
   return (
-    <div className="relative flex flex-col h-screen overflow-hidden bg-neutral-100">
+    <div className="relative flex flex-col flex-1 overflow-hidden bg-neutral-100">
       <header className="relative z-10 flex justify-center pt-6">
         <Nav />
       </header>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full gap-4">
+      <div className="relative z-10 flex flex-col items-center justify-center flex-1 gap-4">
         <img src={logo} alt="Logo" />
         <div className="flex flex-row gap-4">
           <Button variant="primary" onClick={() => window.open('https://duckorg.statuspage.io/', '_blank')}>
