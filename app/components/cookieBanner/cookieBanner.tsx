@@ -40,8 +40,8 @@ export function CookieBanner({ cfToken }: { cfToken: string | null }) {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 inset-x-0 mx-auto w-max max-w-xl z-50 flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl px-6 py-4 shadow-lg dark:bg-gray-950 dark:border-neutral-800">
-      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+    <div className="fixed bottom-4 inset-x-0 mx-auto w-max max-w-xl z-50 flex items-center gap-4 bg-white border border-neutral-200 rounded-2xl px-6 py-4 shadow-lg">
+      <p className="text-sm text-neutral-600">
         We use analytics cookies to understand how you use our site. <a href="/legal/privacy-policy" className="underline">Privacy Policy</a>
       </p>
       <div className="flex gap-2 shrink-0">
