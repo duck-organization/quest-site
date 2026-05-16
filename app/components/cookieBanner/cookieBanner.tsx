@@ -24,6 +24,10 @@ export function CookieBanner({ cfToken }: { cfToken: string | null }) {
     } else if (!consent) {
       setVisible(true);
     }
+
+    const handler = () => setVisible(true);
+    window.addEventListener('show-cookie-banner', handler);
+    return () => window.removeEventListener('show-cookie-banner', handler);
   }, [cfToken]);
 
   function accept() {
