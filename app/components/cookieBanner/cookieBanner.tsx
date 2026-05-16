@@ -2,34 +2,33 @@ import { useEffect, useState } from 'react';
 import { Button } from '../button/button';
 
 const STORAGE_KEY = 'cookie_consent';
-const CF_TOKEN = import.meta.env.VITE_CF_ANALYTICS_TOKEN;
 
-function loadAnalytics() {
-  if (!CF_TOKEN || document.getElementById('cf-analytics')) return;
+function loadAnalytics(token: string) {
+  if (document.getElementById('cf-analytics')) return;
   const script = document.createElement('script');
   script.id = 'cf-analytics';
   script.defer = true;
   script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
-  script.setAttribute('data-cf-beacon', JSON.stringify({ token: CF_TOKEN }));
+  script.setAttribute('data-cf-beacon', JSON.stringify({ token }));
   document.body.appendChild(script);
 }
 
-export function CookieBanner() {
+export function CookieBanner({ cfToken }: { cfToken: string | null }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!CF_TOKEN) return;
+    if (!cfToken) return;
     const consent = localStorage.getItem(STORAGE_KEY);
     if (consent === 'accepted') {
-      loadAnalytics();
+      loadAnalytics(cfToken);
     } else if (!consent) {
       setVisible(true);
     }
-  }, []);
+  }, [cfToken]);
 
   function accept() {
     localStorage.setItem(STORAGE_KEY, 'accepted');
-    loadAnalytics();
+    loadAnalytics(cfToken!);
     setVisible(false);
   }
 

@@ -11,6 +11,10 @@ import "./app.css";
 import { CookieBanner } from "./components/cookieBanner/cookieBanner";
 import { Footer } from "./components/footer/footer";
 
+export function loader() {
+  return { cfAnalyticsToken: process.env.CF_ANALYTICS_TOKEN ?? null };
+}
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -37,7 +41,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="flex flex-col min-h-screen">
         {children}
         <Footer />
-        <CookieBanner />
         <ScrollRestoration />
         <Scripts />
         <script src="https://duckorg.statuspage.io/embed/script.js" />
@@ -46,8 +49,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
-  return <Outlet />;
+export default function App({ loaderData }: Route.ComponentProps) {
+  return (
+    <>
+      <Outlet />
+      <CookieBanner cfToken={loaderData.cfAnalyticsToken} />
+    </>
+  );
 }
 
 export { ErrorBoundary } from "./routes/error";
