@@ -6,7 +6,7 @@ import { Nav } from "~/components/nav/nav";
 export function Landing() {
   const navigate = useNavigate();
   return (
-    <div className="relative flex flex-col flex-1 overflow-hidden bg-neutral-100">
+    <div className="relative flex flex-col flex-1 overflow-hidden">
       <header className="relative z-10 flex justify-center pt-6">
         <Nav />
       </header>

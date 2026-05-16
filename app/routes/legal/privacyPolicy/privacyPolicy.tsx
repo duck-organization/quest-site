@@ -11,7 +11,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function PrivacyPolicy() {
   return (
-    <div className="relative flex flex-col flex-1 overflow-hidden bg-neutral-100">
+    <div className="relative flex flex-col flex-1 overflow-hidden">
       <header className="relative z-10 flex flex-col items-center pt-6 gap-4 pb-4">
         <Nav />
       </header>
