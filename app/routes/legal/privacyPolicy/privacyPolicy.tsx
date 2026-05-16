@@ -51,11 +51,26 @@ export default function PrivacyPolicy() {
               <li>To understand how our services are being used</li>
             </ul>
             <p className="text-sm leading-relaxed">We do not sell your data to third parties.</p>
+            <p className="text-sm leading-relaxed">
+              We process your data on the following legal bases: <span className="font-medium">consent</span> (analytics cookies, where you have opted in via our cookie banner) and <span className="font-medium">legitimate interest</span> (Discord activity data necessary to operate QuestBot).
+            </p>
           </Section>
 
           <Section title="Third-Party Services">
             <p className="text-sm leading-relaxed">
               Our services may link to or integrate with third-party platforms such as Discord. These services have their own privacy policies, and we encourage you to review them. We are not responsible for the practices of third-party services.
+            </p>
+          </Section>
+
+          <Section title="International Data Transfers">
+            <p className="text-sm leading-relaxed">
+              Some of our service providers, including Cloudflare (analytics), may process your data in the United States or other countries outside the EU/UK. Where this occurs, transfers are safeguarded through Standard Contractual Clauses approved by the European Commission.
+            </p>
+          </Section>
+
+          <Section title="Children">
+            <p className="text-sm leading-relaxed">
+              Our services are not directed at children under the age of 16. We do not knowingly collect personal data from anyone under 16. If you believe we have inadvertently collected such data, please contact us and we will delete it promptly.
             </p>
           </Section>
 
@@ -66,8 +81,18 @@ export default function PrivacyPolicy() {
           </Section>
 
           <Section title="Your Rights">
+            <p className="text-sm leading-relaxed">If you are located in the EU or UK, you have the following rights under GDPR:</p>
+            <ul className="text-sm leading-relaxed list-disc list-inside flex flex-col gap-1 pl-2">
+              <li>Request a copy of the personal data we hold about you.</li>
+              <li>Ask us to correct inaccurate or incomplete data.</li>
+              <li>Request deletion of your personal data.</li>
+              <li>Ask us to limit how we process your data.</li>
+              <li>Receive your data in a structured, machine-readable format.</li>
+              <li>Object to processing based on legitimate interest.</li>
+            </ul>
+            <p className="text-sm leading-relaxed">To exercise any of these rights, please reach out to us directly.</p>
             <p className="text-sm leading-relaxed">
-              Depending on your location, you may have the right to access, correct, or delete the personal data we hold about you. To exercise any of these rights, please reach out to us directly.
+              If you are located in the EU or UK, you also have the right to lodge a complaint with your local data protection authority. For example, the ICO (UK), CNIL (France), or your country's equivalent supervisory authority.
             </p>
           </Section>
 
